@@ -1,0 +1,9 @@
+---
+- name: Install Java using Galaxy Role
+  hosts: all
+  become: yes
+  vars:
+    java_packages:
+      - java-17-openjdk-devel
+  roles:
+    - role: geerlingguy.java
